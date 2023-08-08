@@ -4,63 +4,20 @@
     box-sizing: border-box;
 }
 
-body{
+.formulario{
     background-color: #ebebeb;
-}
-.contenedor{
-    margin: 15px 0px;
-}
-.contenedor form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-.contenedor form input{
-    width: 80%;
-    height: 35px;
-    padding-left: 8px;
-    border: inherit;
-    border-radius: 5px;
-    margin-bottom: 40px;
-}
-.contenedor form label{
-    align-self: flex-start;
-    margin-left: 10%;
-    margin-bottom: 15px;
-}
-.perfil-de-usuario{
-    margin-top: -20px;
-}
-.row{
-    margin: 0 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.row-label{
-    margin: 0 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.row-label label input, .row label input{
-    margin-right: 20px;
-}
-.row label{
-    margin-top: -10px;
-    margin-bottom: 30px;
-}
-
-
-
-
-
-
-
-
-
-
+    width:90vw;
+    display: block;
+    justify-content: center;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+ }
+ form label{
+     margin: 5px;
+     margin-left: 10px;
+     text-align: start;
+ }
 
 @media (min-width: 361px){
 main{

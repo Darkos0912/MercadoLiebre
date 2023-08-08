@@ -5,10 +5,13 @@ const PORT = 3000
 
 app.listen(PORT,()=> console.log("Servidor corriendo"));
 
-app.get("/",(req,res)=>{
+app.get("/home",(req,res)=>{
     res.sendFile(path.resolve(__dirname,"./views/home.html"))
 })
-app.get("/crear-cuenta", (req,res)=>{
+app.get("/views/register.html", (req,res)=>{
     res.sendFile(path.resolve(__dirname,"./views/register.html"))
+})
+app.get("/views/login.html", (req,res)=>{
+    res.sendFile(path.resolve(__dirname,"./views/login.html"))
 })
 app.use(express.static(path.resolve(__dirname, "./public")));

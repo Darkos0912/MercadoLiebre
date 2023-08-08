@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <title>Registrarse</title>
+    <title>Mi primera app</title>
 </head>
 <body>
     <header>
@@ -50,47 +50,16 @@
     </header>
     <main>
         <div class="h2-form">
-            <h2>Creá tu cuenta</h2>
+            <h2>Iniciá sesión</h2>
         </div>
         <div class="formulario">
-            <label class="label-subtitulos">Datos personales</label>
-            <form>
-                <input type="text" name="nombre-apellido" placeholder="Nombre y apellido">
-                <input type="text" name="nombre-usuario" placeholder= "Nombre de usuari@">
-                <input type="email" name="e-mail" placeholder="Email">
-            </form>
-            <label class="label-subtitulos" for= "nacimiento">Fecha de Nacimiento</label>
-            <input class="fecha" type="date" name="nacimiento" id="nacimiento">
-            <form>
-                <input type="text" name="domicilio" placeholder="Domicilio">
-            </form>
-            <label class="label-subtitulos">Perfil del Usuario</label>
-            <form class="perfil">
-                <label for= "perfil-comprador"><input type="radio" name="perfil-usuario" id="perfil-usuario"> Comprador</label>
-                <label for= "perfil-vendedor"><input type="radio" name="perfil-usuario" id="perfil-usuario"> Vendedor</label>
-            </form>
-            <label class="label-subtitulos">Categorías de Interés</label>
-            <form class="perfil">
-                <label for="Electro"><input type="checkbox" name="Electro" id="Electro"> Electro</label>
-                <label for="Moda"><input type="checkbox" name="Moda" id="Moda"> Moda</label>
-                <label for="Hogar"><input type="checkbox" name="Hogar" id="Hogar"> Hogar</label>
-                <label for="Juguetería"><input type="checkbox" name="Juguetería" id="Juguetería"> Juguetería</label>
-                <label for="Vida-sana"><input type="checkbox" name="Vida-sana" id="Vida-sana"> Vida sana</label>
-            </form>
-            <label class="label-subtitulos" for="foto-perfil">Foto de perfil</label>
-            <form>
-                <input class="perfil" type="file" name="foto-perfil" id="foto-perfil">
-            </form>
-            <label class="label-subtitulos" for="datos-ingreso">Datos de ingreso</label>
-            <form>
-                <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
-                <input type="password" name="contraseña-refuerzo" id="contraseña-refuerzo" placeholder="Confirmar Contraseña">
-            </form>
+            <input type="text" name="login-nombre-usuario" placeholder="Nombre de usuario o Email">
+            <input type="text" name="login-contraseña" placeholder="Contraseña">
+        </div>
+        <div class="div-enviar-login">
             <div class="enviar-borrar">
                 <button class="boton-enviar" type="submit"><a href="/views/home.html">Enviar</a></button>
-                <button type="reset">Borrar</button>
             </div>
-        </form>
         </div>
     </main>
     <footer>

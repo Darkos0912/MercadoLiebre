@@ -1,46 +1,90 @@
 *{
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
-
-
-
 
 header{
     background-color: #EAC926;
 }
 
-
-
-
-nav{
-    padding-top: 40px;
-}
-nav .contenedor-de-logo-y-search{
+.logo-search-texto{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    margin-bottom: 25px;
 }
-nav .contenedor-de-logo-y-search img{
+.logo{
+    /*background-color: black;*/
     width: 50%;
-}
-nav .contenedor-de-logo-y-search form{ 
-    width: 50%;
-}
-nav .pp{
     text-align: center;
-    margin-top: 13px;
-    margin-bottom: 13px;
+    padding-left: 10px;
 }
-nav ul{
+.logo img{
+    width: 85%;
+}
+.search{
+    /*background-color: green;*/
+    width:50%;
+    padding-top:5px;
+}
+.search form{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    text-align: center;
+}
+.search form input{
+    width: 146px
+    ;
+    height: 35px;
+    color: #ffffff;
+    border-radius: 5px;
+    border:inherit;
+    font-size: .8rem;
+    padding-left: 8px;
+}
+.search form button{
+    border: inherit;
+    background-color: #ffffff;
+    width: 24px;
+    border-radius: 5px;
+    position: relative;
+    right:6px;
+}
+.search form button i{
+    color: #0044aa;
+}
+.texto{
+    /*background-color: aqua;*/
+    width: 100%;
+    padding-top: 20px;
+    text-align: center;
+    font-size: .9rem;
+}
+.menu{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.boton-menu{
+    background-color: #0044aa;
+    width: 35px;
+    padding: 7px;
+    border-radius: 5px;
+}
+.boton-menu i{
+    color: #ffffff;
+    font-size: 17px;
+}
+ul{
     display:none;
     padding-bottom: 15px;
 }
-nav ul li{
+ul li{
     list-style-type: none;
 }
-nav ul li a{
+ul li a{
     text-decoration: none;
     color: black;
 }
@@ -48,26 +92,10 @@ nav ul li a{
 
 
 
-.menudiv{
-    text-align: center;
+.publicidad img{
+    width: 100%;
 }
-.menu{
-    background-color: #0841ae;
-    padding: 7px;
-    margin-bottom: 10px;
-    border-radius: 20%;
-    width: 35px;
-    
-}
-.menu i{
-    font-size: 17px;
-}
-
-
-
-
 main{
-    text-align: center;
     background-color: #ebebeb;
 }
 main .publi{
@@ -80,18 +108,27 @@ main h2{
     margin-bottom: 15px;
     color:#696866;
 }
-main section .contenedor-de-articulos{
+main .contenedor-de-articulos{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
-main section .contenedor-de-articulos article{
+main .contenedor-de-articulos article{
     padding-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
     border: solid #ebebeb 4px;
     background-color: #ffffff;
+    transition: all 0.8s;
 }
-main section .contenedor-de-articulos article .descripcion{
+main .contenedor-de-articulos article:hover{
+    box-shadow: 0px 0px 20px rgb(100, 100, 100);
+    .desc{
+        display:block;
+    }
+}
+main .descripcion{
     border-top: solid 1px #ebebeb;
     color: #6c6f65;
     padding-left: 15px;
@@ -101,7 +138,7 @@ main section .contenedor-de-articulos article .descripcion{
     display: flex;
     flex-direction: row;
 }
-main section .contenedor-de-articulos article .descripcion i{
+main .descripcion i{
     display: block;
     padding: 5px;
     width: 30px;
@@ -112,36 +149,176 @@ main section .contenedor-de-articulos article .descripcion i{
     position: absolute;
     right: 20px;
     top: -15px;
+    transition: all 1s;
 }
-main section .contenedor-de-articulos article .descripcion .precios{
+main .descripcion i:hover{
+    rotate: -100grad;
+}
+main .descripcion .precios{
     font-size: 18px;
     color:black;
 }
-main section .contenedor-de-articulos article .descripcion .descuento{
+main .descripcion .descuento{
     font-size:14.4px;
     color: #37b647;
     padding-left: 20px;
     padding-top: 2px;
 
 }
-main section .contenedor-de-articulos article .desc{
+main .desc{
     display: none;
-    font-size:16px;
+    font-size:40px;
     text-align: left;
     padding-top: 20px;
     padding-left: 16px;
+    transition: all 0.8s;
 
 }
-main section .contenedor-de-articulos article p{
+main .contenedor-de-articulos article p{
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    font-size: 15px;
 }
 
+
+
+/*Formulario Registro*/
+.h2-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.formulario{
+    background-color: #ebebeb;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin:auto;
+    padding: 15px 10px;
+}
+.formulario form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+}
+.formulario form input{
+    font-size: 15px;
+    padding:12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: solid 1px #EAC926;
+    justify-content: flex-start;
+}
+.formulario input{
+    font-size: 15px;
+    padding:12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: solid 1px #EAC926;
+    justify-content: flex-start;
+
+}
+.fecha{
+    max-width:155px;
+}
+.perfil{
+    flex-direction: row;
+    width:auto;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px #EAC926;
+}
+.formulario form label{
+    margin: 5px;
+    margin-left: 10px;
+    text-align: start;
+}
+.label-subtitulos{
+    margin-bottom:10px;
+    margin-top: 10px;
+}
+.enviar-borrar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.boton-enviar{
+    transition: all, 0.5s;
+}
+.boton-enviar a{
+    transition: all, 0.5s;
+}
+.boton-enviar a:hover{
+    color: white
+}
+.enviar-borrar button:hover{
+     background-color: #02a;
+}
+
+.enviar-borrar button{
+    background-color: #EAC926;
+    max-width: 70px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    border:sold 1px #EAC926;
+}
+.enviar-borrar button:hover{
+    color: white;
+    cursor: pointer;
+}
+.enviar-borrar .boton-enviar:hover{
+    background-color: #02a;
+}
+.enviar-borrar button a{
+    text-decoration: none;
+    color: black;
+}
+.boton-enviar{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0
+}
+.boton-enviar button {
+    width:20vw;
+    background-color: #EAC926;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    border: solid 1px #EAC926;
+    transition: all, 0.5s;
+}
+.boton-enviar button a{
+    text-decoration: none;
+    color:black;
+    transition: all, 0.5s
+}
+.boton-enviar button a:hover{
+    color:white
+}
+/*Formulario Registro*/
+
+
+
+/*Formulario de Login*/
+.div-enviar-login{
+    display: flex;
+    justify-content: center;
+}
+/*Formulario de Login*/
 
 
 
 footer{
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 footer .foot div{
     display: flex;
@@ -154,53 +331,136 @@ footer .foot div i{
     font-size: 22px;
     margin-bottom: 10px;
 }
-footer .foot div .parrafo-footer{
+footer .foot div i:hover{
+    color:#37b647;
+}
+footer .parrafo-footer{
     font-size: 16px;
 }
-footer section div .copyrigth{
+footer .copyrigth{
     font-size: .8rem;
     text-align: left;
     padding-bottom: 10px;
 }
+.h2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
-@media (min-width: 361px){
-    nav .contenedor-de-logo-y-search img{
-        max-width: 400px;
+
+
+
+
+
+
+@media (min-width:361px){
+    ul {
+        display: block;
     }
-    nav .contenedor-de-logo-y-search form{
-        text-align: right;
+    .menu{
+        display: none;
     }
-    nav .contenedor-de-logo-y-search form input{
-        text-align: right;
+    .search{
+        display: flex;
+        justify-content: flex-end;
     }
-    nav ul{
-        display:block;
+    .logo{
+        display: flex;
+        justify-content: flex-start;
     }
-    .menudiv{
-        display:none;
+    .logo img{
+        max-width: 220px;
     }
-    main section .contenedor-de-articulos article .desc{
-        display:block;
-    }
-    /*
-    .contenedor-de-logo-y-search img{
-        max-width: 600px
-    }
-    .contenedor-de-logo-y-search form input{
-        width: 40%;
-        height: 16%
-    }
-    .contenedor-de-logo-y-search form button{
-        width: 4%;
-        height: 16%;
+    /*main .desc{
+        display: block;
     }*/
-};
+    .h2{
+        justify-content: flex-start;
+        margin-left: 16.5%;
+    }
+    .formulario{
+       max-width:420px; 
+    }
+}
 
-@media (min-width: 769px){
-    .nav{
+@media (min-width:769px){
+    .logo-search-texto{
+        flex-wrap: nowrap;
+    }
+    .logo{
+        width: fit-content;
+        flex-grow: 1;
+    }
+    .search{
+        justify-content: center;
+        flex-grow: 1;
+    }
+    .texto{
+        display: flex;
+        justify-content: flex-end;
+        width: max-content;
+        flex-grow: 1;
+    }
+    
+    .accesos{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
+    }
+    .accesos-comunes ul{
+        display: flex;
+        flex-direction: row;
+    }
+    .accesos-complejos ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .accesos-comunes{
+        width: 50%;
+    }
+    .accesos-complejos{
+        width: 50%;
+    }
+    .accesos li{
+        margin:0 8px;
+    }
+    footer{
+        display: flex;
+        flex-direction: row;
+    }
+    .formulario{
+        max-width:600px;
+    }
+    .search form input{
+        width:200px;
+    }
+}
+
+
+
+@media (min-width:980px){
+    .logo{
+        flex-grow: 1;
+        margin-top:-15px;
+    }
+    .logo img{
+        max-width: 75%;
+    }
+    .search{
+        flex-grow: 0;
+    }
+    .search form input{
+        width: 420px;
+    }
+    .texto{
+        flex-grow: 1;
+        justify-content: center;
+    }
+    .pp{
+        font-size: 1rem;
+    }
+    .formulario{
+        max-width: 900px;
     }
 }
